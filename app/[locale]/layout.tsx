@@ -4,7 +4,6 @@ import { Inter } from "next/font/google"
 import "../globals.css"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
-import LocaleDetector from "@/components/locale-detector"
 import ErrorBoundary from "@/components/error-boundary"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages } from "next-intl/server"
@@ -18,11 +17,12 @@ export const metadata: Metadata = {
 
 export default async function LocaleLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }) {
+  const { locale } = await params
   const messages = await getMessages()
 
   return (
@@ -30,7 +30,6 @@ export default async function LocaleLayout({
       <body className={inter.className}>
         <ErrorBoundary>
           <NextIntlClientProvider messages={messages}>
-            <LocaleDetector />
             <Navigation />
             <main className="pt-20">{children}</main>
             <Footer />

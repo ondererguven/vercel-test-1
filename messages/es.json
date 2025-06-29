@@ -1,0 +1,19 @@
+{
+  "navigation": {
+    "services": "Servicios",
+    "about": "Acerca de",
+    "contact": "Contacto"
+  },
+  "homepage": {
+    "heroTitle": "Elevando Marcas a Través de",
+    "heroSubtitle": "Conexiones Auténticas",
+    "heroDescription": "Creamos experiencias significativas en redes sociales que resuenan con tu audiencia y generan resultados comerciales reales.",
+    "startJourney": "Comienza Tu Viaje",
+    "learnMore": "Saber Más"
+  },
+  "footer": {
+    "allRightsReserved": "Todos los derechos reservados.",
+    "privacy": "Privacidad",
+    "terms": "Términos"
+  }
+}
