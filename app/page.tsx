@@ -1,7 +1,6 @@
-"use client"
+import { redirect } from "next/navigation"
 
-import  from "../i18n/request"
-
-export default function SyntheticV0PageForDeployment() {
-  return < />
+export default function RootPage() {
+  // Redirect to the default locale
+  redirect("/en")
 }
