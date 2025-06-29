@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
-import Image from "next/image"
 import { useTranslations } from "next-intl"
 
 export default function HomePage() {
@@ -15,13 +14,9 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="mb-8">
-              <Image
-                src="/images/samimi-logo-transparent.png"
-                alt="Samimi"
-                width={300}
-                height={100}
-                className="h-20 w-auto mx-auto"
-              />
+              <div className="h-20 w-auto mx-auto flex items-center justify-center">
+                <span className="text-3xl font-bold text-samimi-green">Samimi</span>
+              </div>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-gray-900 mb-6">
               {t("heroTitle")}

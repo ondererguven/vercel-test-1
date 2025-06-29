@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation"
 
 export default function RootPage() {
-  // Redirect to the default locale
+  // This will be handled by middleware, but keeping as fallback
   redirect("/en")
 }
