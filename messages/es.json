@@ -1,0 +1,152 @@
+{
+  "navigation": {
+    "services": "Servicios",
+    "talents": "Talentos",
+    "about": "Acerca de",
+    "contactUs": "Contáctanos",
+    "talentManagement": "Gestión de Talentos",
+    "brandConsulting": "Consultoría de Marca",
+    "influencerMarketing": "Marketing de Influencers",
+    "brandEventActivations": "Activaciones de Marca y Eventos",
+    "language": "Idioma"
+  },
+  "homepage": {
+    "heroTitle": "Conexiones",
+    "heroSubtitle": "Auténticas",
+    "heroDescription": "Elevamos marcas a través de la excelencia estratégica en redes sociales y asociaciones significativas con influencers.",
+    "startJourney": "Comienza tu Viaje",
+    "learnMore": "Saber Más"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "description": "Soluciones integrales de redes sociales diseñadas para elevar tu marca y crear conexiones auténticas con tu audiencia.",
+    "talentManagement": {
+      "title": "Gestión de Talentos",
+      "description": "Nutrimos y desarrollamos talento en redes sociales, brindando apoyo integral desde estrategia de contenido hasta asociaciones de marca. Nuestro enfoque de gestión de talentos se centra en el crecimiento auténtico y el desarrollo profesional sostenible.",
+      "features": [
+        "Desarrollo de Estrategia de Contenido",
+        "Facilitación de Asociaciones de Marca",
+        "Planificación de Crecimiento Profesional",
+        "Análisis de Rendimiento"
+      ]
+    },
+    "brandConsulting": {
+      "title": "Consultoría de Marca",
+      "description": "Orientación estratégica para posicionar tu marca para el máximo impacto social. Analizamos tendencias del mercado, panoramas competitivos y comportamiento de la audiencia para crear estrategias ganadoras.",
+      "features": [
+        "Estrategia de Posicionamiento de Marca",
+        "Análisis de Mercado",
+        "Investigación de Competidores",
+        "Auditorías de Redes Sociales"
+      ]
+    },
+    "influencerMarketing": {
+      "title": "Marketing de Influencers",
+      "description": "Conectando marcas con las voces correctas para un compromiso significativo. Facilitamos asociaciones auténticas que generan resultados reales y construyen relaciones duraderas.",
+      "features": [
+        "Emparejamiento de Influencers",
+        "Gestión de Campañas",
+        "Seguimiento de Rendimiento",
+        "Optimización de ROI"
+      ]
+    },
+    "brandEventActivations": {
+      "title": "Activaciones de Marca y Eventos",
+      "description": "Creando experiencias memorables que resuenan con tu audiencia. Desde campañas digitales hasta eventos en vivo, damos vida a las marcas a través de activaciones innovadoras.",
+      "features": [
+        "Planificación y Ejecución de Eventos",
+        "Creación de Campañas Digitales",
+        "Marketing Experiencial",
+        "Integración Multi-Plataforma"
+      ]
+    },
+    "learnMore": "Saber Más",
+    "readyToStart": "¿Listo para Comenzar?",
+    "readyDescription": "Hablemos sobre cómo nuestros servicios pueden ayudar a transformar la presencia de tu marca en redes sociales.",
+    "contactToday": "Contáctanos Hoy"
+  },
+  "talents": {
+    "title": "Nuestros Talentos",
+    "description": "Conoce a los creadores e influencers excepcionales que aportan autenticidad y creatividad a cada asociación de marca.",
+    "followers": "Seguidores",
+    "engagement": "Compromiso",
+    "impact": "Nuestro Impacto",
+    "impactDescription": "Los números hablan por sí mismos",
+    "stats": {
+      "creators": "Creadores Talentosos",
+      "reach": "Alcance Combinado",
+      "campaigns": "Campañas Exitosas",
+      "satisfaction": "Satisfacción del Cliente"
+    },
+    "specialties": {
+      "lifestyleFashion": "Estilo de Vida y Moda",
+      "techInnovation": "Tecnología e Innovación",
+      "foodTravel": "Comida y Viajes",
+      "fitnessWellness": "Fitness y Bienestar"
+    }
+  },
+  "about": {
+    "title": "Acerca de Samimi",
+    "description": "Somos una agencia de redes sociales visionaria dedicada a crear conexiones auténticas entre marcas y sus audiencias a través de asociaciones estratégicas y campañas innovadoras.",
+    "ourStory": "Nuestra Historia",
+    "storyParagraphs": [
+      "Fundada con la visión de cerrar la brecha entre marcas y talento auténtico en redes sociales, Samimi ha crecido hasta convertirse en un socio confiable para empresas que buscan compromiso digital significativo.",
+      "Nuestro viaje comenzó con una creencia simple: que el marketing más poderoso proviene de conexiones genuinas y narrativas auténticas. Hoy, continuamos defendiendo esta filosofía mientras ayudamos a las marcas a navegar el panorama en constante evolución de las redes sociales.",
+      "Con una red curada de creadores talentosos y un profundo entendimiento de las tendencias digitales, creamos campañas que no solo captan la atención sino que también generan resultados comerciales reales."
+    ],
+    "ourValues": "Nuestros Valores",
+    "valuesDescription": "Los principios que guían todo lo que hacemos y dan forma a nuestras relaciones con clientes y talentos.",
+    "values": {
+      "authenticity": {
+        "title": "Autenticidad",
+        "description": "Creemos en conexiones genuinas y narrativas auténticas que resuenan con personas reales."
+      },
+      "excellence": {
+        "title": "Excelencia",
+        "description": "Nos esforzamos por la excelencia en cada campaña, asociación y esfuerzo creativo que emprendemos."
+      },
+      "innovation": {
+        "title": "Innovación",
+        "description": "Nos mantenemos a la vanguardia de las tendencias y adoptamos nuevas tecnologías para ofrecer soluciones de vanguardia."
+      },
+      "community": {
+        "title": "Comunidad",
+        "description": "Fomentamos una comunidad de apoyo donde talentos y marcas pueden prosperar juntos."
+      }
+    },
+    "ourMission": "Nuestra Misión",
+    "missionDescription": "Empoderar a marcas y creadores para construir relaciones auténticas que impulsen compromiso significativo, fomenten la comunidad y creen un impacto duradero en el mundo digital."
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "description": "¿Listo para elevar tu marca? Comencemos una conversación sobre cómo podemos ayudarte a crear conexiones auténticas con tu audiencia.",
+    "getInTouch": "Ponte en Contacto",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo Electrónico",
+      "company": "Empresa",
+      "serviceOfInterest": "Servicio de Interés",
+      "selectService": "Selecciona un servicio",
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntanos sobre tu proyecto y cómo podemos ayudar...",
+      "sendMessage": "Enviar Mensaje",
+      "required": "*"
+    },
+    "letsConnect": "Conectemos",
+    "contactInfo": {
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "office": "Oficina",
+      "address": "123 Calle Creativa\nNueva York, NY 10001"
+    },
+    "responseTime": "Tiempo de Respuesta",
+    "responseDescription": "Típicamente respondemos a todas las consultas dentro de 24 horas durante días laborables.",
+    "urgentNote": "Para asuntos urgentes, por favor llámanos directamente."
+  },
+  "footer": {
+    "copyright": "© 2024 Samimi. Todos los derechos reservados."
+  },
+  "common": {
+    "company": "Empresa"
+  }
+}
