@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import "./globals.css"
+import "../globals.css"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import LocaleDetector from "@/components/locale-detector"
@@ -14,18 +14,19 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Samimi - Social Media Agency",
   description: "Elevating brands through authentic connections and strategic social media excellence.",
-    generator: 'v0.dev'
 }
 
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
+  params: { locale },
 }: {
   children: React.ReactNode
+  params: { locale: string }
 }) {
   const messages = await getMessages()
 
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={inter.className}>
         <ErrorBoundary>
           <NextIntlClientProvider messages={messages}>
