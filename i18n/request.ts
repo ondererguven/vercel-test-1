@@ -9,7 +9,7 @@ export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale as any)) notFound()
 
   return {
-    messages: (await import(`./messages/${locale}.json`)).default,
+    messages: (await import(`../messages/${locale}.json`)).default,
     // Configure time zone and other locale-specific settings
     timeZone: "America/New_York",
     now: new Date(),
