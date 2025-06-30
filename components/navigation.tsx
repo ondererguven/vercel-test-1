@@ -1,108 +1,140 @@
 "use client"
 
-import Link from "next/link"
-import { useTranslations, useLocale } from "next-intl"
-import { Menu, Globe } from "lucide-react"
 import { useState } from "react"
-import { cn } from "@/lib/utils"
-import { usePathname } from "next/navigation"
+import Link from "next/link"
+import Image from "next/image"
+import { ChevronDown, Menu, X } from "lucide-react"
 
 export default function Navigation() {
-  const t = useTranslations("navigation")
-  const locale = useLocale()
-  const pathname = usePathname()
-  const [open, setOpen] = useState(false)
-  const [langOpen, setLangOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const getLocalizedPath = (newLocale: string) => {
-    const segments = pathname.split("/")
-    segments[1] = newLocale
-    return segments.join("/")
-  }
+  const services = ["Talent Management", "Brand Consulting", "Influencer Marketing", "Brand & Event Activations"]
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 bg-white/70 backdrop-blur border-b">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        {/* Logo */}
-        <Link href={`/${locale}`} className="text-lg font-semibold text-samimi-green">
-          Samimi
-        </Link>
-
-        {/* Desktop links */}
-        <nav className="hidden gap-8 md:flex items-center">
-          <Link href={`/${locale}/services`} className="text-sm font-medium hover:text-samimi-green transition-colors">
-            {t("services")}
-          </Link>
-          <Link href={`/${locale}/about`} className="text-sm font-medium hover:text-samimi-green transition-colors">
-            {t("about")}
-          </Link>
-          <Link href={`/${locale}/contact`} className="text-sm font-medium hover:text-samimi-green transition-colors">
-            {t("contact")}
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <Link href="/" className="flex-shrink-0">
+            <Image
+              src="/images/samimi-logo-transparent.png"
+              alt="Samimi"
+              width={1080}
+              height={1350}
+              className="h-auto w-96"
+            />
           </Link>
 
-          {/* Language Switcher */}
-          <div className="relative">
-            <button
-              onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1 text-sm font-medium hover:text-samimi-green transition-colors"
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <div
+              className="relative"
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
             >
-              <Globe className="h-4 w-4" />
-              {locale.toUpperCase()}
-            </button>
-            {langOpen && (
-              <div className="absolute right-0 mt-2 w-24 bg-white rounded-md shadow-lg border">
-                <Link
-                  href={getLocalizedPath("en")}
-                  className="block px-3 py-2 text-sm hover:bg-gray-50"
-                  onClick={() => setLangOpen(false)}
+              <button className="flex items-center space-x-1 text-gray-900 hover:text-samimi-green transition-colors duration-200 font-medium">
+                <span>Services</span>
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+
+              {isServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2">
+                  {services.map((service, index) => (
+                    <Link
+                      key={index}
+                      href={`/services/${service.toLowerCase().replace(/\s+/g, "-").replace("&", "and")}`}
+                      className="block px-4 py-3 text-gray-700 hover:text-samimi-green hover:bg-samimi-beige transition-colors duration-200"
+                    >
+                      {service}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link
+              href="/talents"
+              className="text-gray-900 hover:text-samimi-green transition-colors duration-200 font-medium"
+            >
+              Talents
+            </Link>
+            <Link
+              href="/about"
+              className="text-gray-900 hover:text-samimi-green transition-colors duration-200 font-medium"
+            >
+              About
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-samimi-green text-white px-6 py-2 rounded-full hover:bg-samimi-green-dark transition-colors duration-200 font-medium"
+            >
+              Contact Us
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <button className="md:hidden p-2" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden py-4 bg-white/95 backdrop-blur-sm rounded-lg mt-2 border border-gray-100">
+            <div className="space-y-4 px-4">
+              <div>
+                <button
+                  className="flex items-center justify-between w-full text-left text-gray-900 font-medium py-2"
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
                 >
-                  EN
-                </Link>
-                <Link
-                  href={getLocalizedPath("es")}
-                  className="block px-3 py-2 text-sm hover:bg-gray-50"
-                  onClick={() => setLangOpen(false)}
-                >
-                  ES
-                </Link>
+                  Services
+                  <ChevronDown
+                    className={`h-4 w-4 transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+                {isServicesOpen && (
+                  <div className="pl-4 space-y-2 mt-2">
+                    {services.map((service, index) => (
+                      <Link
+                        key={index}
+                        href={`/services/${service.toLowerCase().replace(/\s+/g, "-").replace("&", "and")}`}
+                        className="block text-gray-600 py-1"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {service}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
-            )}
+              <Link
+                href="/talents"
+                className="block text-gray-900 font-medium py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Talents
+              </Link>
+              <Link
+                href="/about"
+                className="block text-gray-900 font-medium py-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link
+                href="/contact"
+                className="block bg-samimi-green text-white px-6 py-2 rounded-full text-center font-medium"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
-        </nav>
-
-        {/* Mobile hamburger */}
-        <button onClick={() => setOpen(!open)} className="md:hidden" aria-label={open ? "Close menu" : "Open menu"}>
-          <Menu className="h-6 w-6" />
-        </button>
-      </div>
-
-      {/* Mobile menu sheet */}
-      <div
-        className={cn(
-          "md:hidden transition-all duration-300 overflow-hidden bg-white border-b",
-          open ? "max-h-96" : "max-h-0",
         )}
-      >
-        <nav className="flex flex-col px-4 pb-4">
-          <Link href={`/${locale}/services`} className="py-2 text-sm font-medium" onClick={() => setOpen(false)}>
-            {t("services")}
-          </Link>
-          <Link href={`/${locale}/about`} className="py-2 text-sm font-medium" onClick={() => setOpen(false)}>
-            {t("about")}
-          </Link>
-          <Link href={`/${locale}/contact`} className="py-2 text-sm font-medium" onClick={() => setOpen(false)}>
-            {t("contact")}
-          </Link>
-          <div className="py-2 border-t mt-2">
-            <Link href={getLocalizedPath("en")} className="block py-1 text-sm" onClick={() => setOpen(false)}>
-              English
-            </Link>
-            <Link href={getLocalizedPath("es")} className="block py-1 text-sm" onClick={() => setOpen(false)}>
-              Español
-            </Link>
-          </div>
-        </nav>
       </div>
-    </header>
+    </nav>
   )
 }
